@@ -1,0 +1,24 @@
+body {
+  font-family: var(--ff-default);
+  font-size: var(--fz-md);
+  font-weight: var(--fw-primary);
+  color: var(--clr-primary);
+}
+
+a {
+  text-decoration: none;
+  
+  &:where(:active, :visited) {
+    color: inherit;
+  }
+}
+
+ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}

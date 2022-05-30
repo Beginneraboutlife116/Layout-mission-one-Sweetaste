@@ -67,5 +67,43 @@ p, h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --fz-md: 1rem;
+  --fz-lg: calc(var(--fz-md) * 1.25);
+  --fz-xl: calc(var(--fz-md) * 1.5);
+  --ff-primary: "PingFang TC", sans-serif;
+  --ff-secondary: "Helvetica Neue", sans-serif;
+  --ff-others: Times, sans-serif;
+  --fw-primary: 600;
+  --fw-secondary: 400;
+  --fw-others: 300;
+  --clr-primary: #3F5D45;
+  --clr-secondary: #EAF0ED;
+  --clr-others: #FFE180;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: var(--fz-md);
+  font-weight: var(--fw-primary);
+  color: var(--clr-primary);
+}
+
+a {
+  text-decoration: none;
+}
+a:where(:active, :visited) {
+  color: inherit;
+}
+
+ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
 
 /*# sourceMappingURL=style.css.map */
