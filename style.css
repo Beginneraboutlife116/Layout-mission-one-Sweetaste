@@ -107,4 +107,8 @@ button {
   cursor: pointer;
 }
 
+.header {
+  padding-block: 1.875rem;
+}
+
 /*# sourceMappingURL=style.css.map */
