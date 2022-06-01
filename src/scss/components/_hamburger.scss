@@ -33,7 +33,7 @@
     }
   }
   
-  @include for-phone-up {
+  @include for-tablet-up {
     display: none;
   }
 }

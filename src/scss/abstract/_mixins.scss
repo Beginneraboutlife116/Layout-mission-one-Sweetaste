@@ -1,6 +1,19 @@
 // for media query
+// up to 620px
 @mixin for-phone-up {
-  @media (min-width: 56.24rem) {
+  @media (min-width: 38.75rem) {
+    @content;
+  }
+}
+// for cards layout
+@mixin for-cards-layout {
+  @media (min-width: 48.75rem) {
+    @content;
+  }
+}
+// up to 900px
+@mixin for-tablet-up {
+  @media (min-width: 56.25rem) {
     @content;
   }
 }

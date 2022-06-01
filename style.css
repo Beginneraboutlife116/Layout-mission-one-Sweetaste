@@ -74,9 +74,9 @@ p, h1, h2, h3, h4, h5, h6 {
   --ff-primary: "PingFang TC", sans-serif;
   --ff-secondary: "Helvetica Neue", sans-serif;
   --ff-others: Times, sans-serif;
-  --fw-primary: 600;
-  --fw-secondary: 400;
-  --fw-others: 300;
+  --fw-semiBold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
   --clr-primary: #3F5D45;
   --clr-secondary: #EAF0ED;
   --clr-others: #FFE180;
@@ -86,7 +86,7 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   font-family: var(--ff-primary);
   font-size: var(--fz-md);
-  font-weight: var(--fw-primary);
+  font-weight: var(--fw-semiBold);
   color: var(--clr-primary);
 }
 
@@ -110,6 +110,7 @@ ul {
 button {
   border: none;
   background-color: transparent;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -125,7 +126,7 @@ button {
 .header__shopping-cart {
   width: clamp(1.5rem, 5.2vw, 2.25rem);
 }
-@media (min-width: 56.24rem) {
+@media (min-width: 56.25rem) {
   .header__shopping-cart {
     width: 1.5rem;
   }
@@ -144,10 +145,39 @@ button {
   margin-inline-start: auto;
 }
 
+@media (min-width: 38.75rem) {
+  .menu {
+    margin-block-start: calc(var(--space) * 2);
+    display: grid;
+    grid-template-columns: 18.75rem 1fr;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+}
+@media (min-width: 56.25rem) {
+  .menu {
+    --custom-space: 0rem;
+    width: min(100% - var(--custom-space, var(--space)) * 2, var(--custom-width, 58.75rem));
+    margin-inline: auto;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+@media (min-width: 48.75rem) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .logos {
   width: min(36.2%, 13.7181rem);
 }
-@media (min-width: 56.24rem) {
+@media (min-width: 56.25rem) {
   .logos > a {
     display: flex;
     gap: 3.8%;
@@ -160,13 +190,13 @@ button {
   visibility: hidden;
   width: 0;
 }
-@media (min-width: 56.24rem) {
+@media (min-width: 56.25rem) {
   .logo {
     flex: 1 1;
   }
   .logo_desktop-only {
     visibility: visible;
-    flex: 0 0 40px;
+    flex: 0 0 2.5rem;
   }
 }
 
@@ -199,7 +229,7 @@ button {
 .hamburger__style::after {
   bottom: clamp(5px, 1.2vw, 10px);
 }
-@media (min-width: 56.24rem) {
+@media (min-width: 56.25rem) {
   .hamburger {
     display: none;
   }
@@ -226,7 +256,7 @@ button {
 .nav__link:hover {
   text-decoration: underline;
 }
-@media (min-width: 56.24rem) {
+@media (min-width: 56.25rem) {
   .nav {
     position: relative;
     visibility: visible;
@@ -280,6 +310,100 @@ button {
 }
 .category__title, .category__item {
   padding-block: 1rem;
+}
+
+.card {
+  width: 19.6875rem;
+  margin-inline: auto;
+  margin-block-start: var(--space);
+}
+.card__display {
+  width: 100%;
+  height: 19.6875rem;
+  position: relative;
+}
+.card__category {
+  width: min-content;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  line-height: 1.25;
+  padding: 3.33%;
+  position: absolute;
+  left: 6.67%;
+}
+.card_pic_1 {
+  background-image: url("https://bit.ly/2QiWeQW");
+  background-size: cover;
+  background-position: center;
+}
+.card_pic_2 {
+  background-image: url("https://bit.ly/2zBjQuq");
+  background-size: cover;
+  background-position: center;
+}
+.card_pic_3 {
+  background-image: url("https://bit.ly/2zKOP7w");
+  background-size: cover;
+  background-position: center;
+}
+.card_pic_4 {
+  background-image: url("https://bit.ly/2NcDVuB");
+  background-size: cover;
+  background-position: center;
+}
+.card_pic_5 {
+  background-image: url("https://bit.ly/2zBDAxX");
+  background-size: cover;
+  background-position: center;
+}
+.card_pic_6 {
+  background-image: url("https://bit.ly/2zL5jN7");
+  background-size: cover;
+  background-position: center;
+}
+.card__info {
+  display: flex;
+}
+.card__name, .card__price {
+  font-size: var(--fz-lg);
+  text-align: center;
+  padding-block: 1rem;
+  border-right: 1px solid var(--clr-secondary);
+}
+.card__price {
+  width: 42.33%;
+}
+.card__name {
+  width: 57.67%;
+  font-weight: var(--fw-light);
+  border-left: 1px solid var(--clr-secondary);
+}
+@media (min-width: 38.75rem) {
+  .card {
+    width: max(18.75rem, 100% - 5rem);
+    margin-block-start: 0;
+  }
+}
+@media (min-width: 48.75rem) {
+  .card {
+    width: 100%;
+  }
+}
+
+.favorite-selector {
+  position: absolute;
+  inset: 6% 7.5% auto auto;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  padding-block: 1rem;
+  font-size: var(--fz-xl);
+}
+
+.btn_secondary {
+  background-color: var(--clr-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */

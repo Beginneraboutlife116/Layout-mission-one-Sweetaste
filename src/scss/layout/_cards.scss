@@ -1,0 +1,12 @@
+@use '../abstract/mixins' as *;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+
+  @include for-cards-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

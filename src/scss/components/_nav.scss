@@ -24,7 +24,7 @@
     }
   }
 
-  @include for-phone-up {
+  @include for-tablet-up {
     position: relative;
     visibility: visible;
     transform: scaleY(1);

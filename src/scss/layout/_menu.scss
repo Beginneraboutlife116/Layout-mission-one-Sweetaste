@@ -1,0 +1,16 @@
+@use '../abstract/mixins' as *;
+
+.menu {
+  @include for-phone-up {
+    margin-block-start: calc(var(--space) * 2);
+    display: grid;
+    grid-template-columns: 18.75rem 1fr;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  @include for-tablet-up {
+    --custom-space: 0rem;
+    @include container;
+  }
+}
