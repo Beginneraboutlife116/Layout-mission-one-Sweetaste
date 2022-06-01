@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  margin-block-end: var(--space);
 
   @include for-cards-layout {
     display: grid;

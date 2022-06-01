@@ -166,6 +166,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  margin-block-end: var(--space);
 }
 @media (min-width: 48.75rem) {
   .cards {
@@ -412,6 +413,46 @@ button {
 
 .btn_secondary {
   background-color: var(--clr-secondary);
+}
+
+.paginator {
+  max-width: 58.75rem;
+  margin-inline: auto;
+}
+.paginator__list {
+  width: 18.5rem;
+  margin-inline: auto;
+  display: flex;
+}
+@media (min-width: 38.75rem) {
+  .paginator__list {
+    margin-inline: auto 0;
+  }
+}
+.paginator__item {
+  width: 100%;
+  height: 3.75rem;
+  border: 1px solid var(--clr-secondary);
+}
+.paginator__item + .paginator__item {
+  border-left: none;
+}
+.paginator__link {
+  text-align: center;
+  width: 100%;
+  padding-block: calc((100% - 1.5rem) / 2);
+  font-size: var(--fz-lg);
+}
+.paginator__link svg {
+  margin-inline: auto;
+}
+.paginator__prev:active svg, .paginator__next:active svg {
+  fill: var(--clr-secondary);
+}
+
+.paginator_current-page, .paginator__prev:active, .paginator__next:active {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */

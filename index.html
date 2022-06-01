@@ -160,33 +160,48 @@
           <button class="btn btn_secondary">加入購物車</button>
         </article>
       </div>
-      <aside class="paginator">
-        <ul class="paginator__list">
-          <li class="paginator__item">
-            <a href="#" class="paginator__link">
-              <img
-                src="./src/asset/image/ic_arrow_prev.svg"
-                alt="previous page"
-              />
-            </a>
-          </li>
-          <li class="paginator__item">
-            <a href="#" class="paginator__link">1</a>
-          </li>
-          <li class="paginator__item">
-            <a href="#" class="paginator__link">2</a>
-          </li>
-          <li class="paginator__item">
-            <a href="#" class="paginator__link">3</a>
-          </li>
-          <li class="paginator__item">
-            <a href="#" class="paginator__link">
-              <img src="./src/asset/image/ic_arrow_next.svg" alt="next page" />
-            </a>
-          </li>
-        </ul>
-      </aside>
     </main>
+    <aside class="paginator">
+      <ul class="paginator__list">
+        <li class="paginator__item">
+          <a href="#" class="paginator__link paginator__prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M14 7l-5 5 5 5V7z" />
+              <path d="M24 0v24H0V0h24z" fill="none" />
+            </svg>
+          </a>
+        </li>
+        <li class="paginator__item paginator_current-page">
+          <a href="#" class="paginator__link">1</a>
+        </li>
+        <li class="paginator__item">
+          <a href="#" class="paginator__link">2</a>
+        </li>
+        <li class="paginator__item">
+          <a href="#" class="paginator__link">3</a>
+        </li>
+        <li class="paginator__item paginator__next">
+          <a href="#" class="paginator__link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M10 17l5-5-5-5v10z" />
+              <path d="M0 24V0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </aside>
     <section class="cta">
       <div class="cta__title">
         <img src="./src/asset/image/logo-light.svg" alt="light logo" />
