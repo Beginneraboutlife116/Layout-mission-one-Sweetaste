@@ -317,6 +317,14 @@ button {
   margin-inline: auto;
   margin-block-start: var(--space);
 }
+.card_mobile_none {
+  display: none;
+}
+@media (min-width: 48.75rem) {
+  .card_mobile_none {
+    display: block;
+  }
+}
 .card__display {
   width: 100%;
   height: 19.6875rem;

@@ -1,10 +1,19 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
+@use 'sass:string';
 
 .card {
   width: 19.6875rem;
   margin-inline: auto;
   margin-block-start: var(--space);
+
+  &_mobile_none {
+    display: none;
+
+    @include for-cards-layout {
+      display: block;
+    }
+  }
 
   &__display {
     width: 100%;
