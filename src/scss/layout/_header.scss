@@ -2,7 +2,7 @@
 
 .header {
   @include container;
-  
+
   padding-block: var(--space);
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@
   transform: scaleY(0);
   transform-origin: top;
   transition: transform .1s ease;
-  
+
   &__item {
     margin-block-end: 2.5vmin;
   }
@@ -48,12 +48,16 @@
   }
 }
 
-#nav-toggle:checked + .nav {
-  visibility: visible;
-  transform: scaleY(1);
-
-  .nav__link {
-    transition: opacity .2s ease;
-    opacity: 1;
+#nav-toggle {
+  display: none;
+  
+  &:checked + .nav {
+    visibility: visible;
+    transform: scaleY(1);
+  
+    .nav__link {
+      transition: opacity .2s ease;
+      opacity: 1;
+    }
   }
 }

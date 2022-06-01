@@ -113,12 +113,8 @@ button {
   cursor: pointer;
 }
 
-.d_none {
-  display: none;
-}
-
 .header {
-  width: min(100% - var(--space) * 2, 58.75rem);
+  width: min(100% - var(--custom-space, var(--space)) * 2, 58.75rem);
   margin-inline: auto;
   padding-block: var(--space);
   display: flex;
@@ -136,6 +132,9 @@ button {
 }
 
 .banner {
+  --custom-space: 0rem;
+  width: min(100% - var(--custom-space, var(--space)) * 2, 58.75rem);
+  margin-inline: auto;
   background-image: url(https://bit.ly/2Qodh3Z);
   background-size: cover;
   padding: var(--space);
@@ -143,12 +142,6 @@ button {
 .banner__slogan {
   width: 15.85%;
   margin-inline-start: auto;
-}
-@media (min-width: 56.24rem) {
-  .banner {
-    width: min(100% - var(--space) * 2, 58.75rem);
-    margin-inline: auto;
-  }
 }
 
 .logos {
@@ -255,6 +248,9 @@ button {
   }
 }
 
+#nav-toggle {
+  display: none;
+}
 #nav-toggle:checked + .nav {
   visibility: visible;
   transform: scaleY(1);
