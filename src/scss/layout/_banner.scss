@@ -1,0 +1,17 @@
+@use '../abstract/mixins' as *;
+@use './utilities' as *;
+
+.banner {
+  background-image: url(https://bit.ly/2Qodh3Z);
+  background-size: cover;
+  padding: var(--space);
+
+  &__slogan {
+    width: 15.85%;
+    margin-inline-start: auto;
+  }
+
+  @include for-phone-up {
+    @include container;
+  }
+}

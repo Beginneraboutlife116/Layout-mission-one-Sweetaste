@@ -4,3 +4,9 @@
     @content;
   }
 }
+
+// for container width
+@mixin container {
+  width: min(100% - var(--space) * 2, 58.75rem);
+  margin-inline: auto;
+}

@@ -113,16 +113,13 @@ button {
   cursor: pointer;
 }
 
-.container {
-  width: min(100% - var(--space) * 2, 58.75rem);
-  margin-inline: auto;
-}
-
 .d_none {
   display: none;
 }
 
 .header {
+  width: min(100% - var(--space) * 2, 58.75rem);
+  margin-inline: auto;
   padding-block: var(--space);
   display: flex;
   align-items: center;
@@ -135,6 +132,22 @@ button {
 @media (min-width: 56.24rem) {
   .header__shopping-cart {
     width: 1.5rem;
+  }
+}
+
+.banner {
+  background-image: url(https://bit.ly/2Qodh3Z);
+  background-size: cover;
+  padding: var(--space);
+}
+.banner__slogan {
+  width: 15.85%;
+  margin-inline-start: auto;
+}
+@media (min-width: 56.24rem) {
+  .banner {
+    width: min(100% - var(--space) * 2, 58.75rem);
+    margin-inline: auto;
   }
 }
 
