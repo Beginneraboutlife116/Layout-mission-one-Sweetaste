@@ -14,21 +14,28 @@
   --clr-primary: #3F5D45;
   --clr-secondary: #EAF0ED;
   --clr-others: #FFE180;
+
+  --space: 1.875rem;
 }
 
 body {
-  font-family: var(--ff-default);
+  font-family: var(--ff-primary);
   font-size: var(--fz-md);
   font-weight: var(--fw-primary);
   color: var(--clr-primary);
 }
 
 a {
+  display: block;
   text-decoration: none;
   
   &:where(:active, :visited) {
     color: inherit;
   }
+}
+
+[class*="__link"] {
+  display: inline-block;
 }
 
 ul {

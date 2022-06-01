@@ -1,0 +1,39 @@
+@use '../abstract/mixins' as *;
+
+.hamburger {
+  display: inline-block;
+  width: clamp(1.5rem, 6vw, 3rem);
+  aspect-ratio: 1;
+  cursor: pointer;
+  display: flex;
+  
+  &__style {
+    display: inline-block;
+    width: 75%;
+    height: clamp(2px, 0.45vw, 3px);
+    margin: auto;
+    position: relative;
+    background-color: var(--clr-primary);
+
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: clamp(2px, 0.45vw, 3px);
+      background-color: inherit;
+    }
+
+    &::before {
+      top: clamp(5px, 1.2vw, 10px);
+    }
+
+    &::after {
+      bottom: clamp(5px, 1.2vw, 10px);
+    }
+  }
+  
+  @include for-phone-up {
+    display: none;
+  }
+}

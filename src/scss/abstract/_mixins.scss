@@ -1,0 +1,6 @@
+// for media query
+@mixin for-phone-up {
+  @media (min-width: 56.24rem) {
+    @content;
+  }
+}

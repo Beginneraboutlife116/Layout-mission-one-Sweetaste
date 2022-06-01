@@ -4,21 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Sweetaste</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
+      <label for="nav-toggle" class="hamburger">
+        <span class="hamburger__style"></span>
+      </label>
       <div class="logos">
         <a href="#" aria-label="回首頁">
-          <img src="./src/asset/image/logo-dark.svg" alt="dark logo" />
-          <img
-            class="logo"
-            src="./src/asset/image/logo.svg"
-            alt="Sweetaste logo dark"
-          />
+          <div class="logo_desktop-only">
+            <img
+              src="./src/asset/image/logo-dark.svg"
+              alt="dark logo"
+            />
+          </div>
+          <div class="logo">
+            <img
+              src="./src/asset/image/logo.svg"
+              alt="Sweetaste logo dark"
+            />
+          </div>
         </a>
       </div>
+      <input type="checkbox" id="nav-toggle" class="d_none" />
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">首頁</a></li>
@@ -28,6 +38,7 @@
       </nav>
       <a href="#"
         ><img
+          class="header__shopping-cart"
           src="./src/asset/image/ic_shopping_cart.svg"
           alt="shopping cart icon"
       /></a>

@@ -1,3 +1,18 @@
+@use '../abstract/mixins' as *;
+
 .header {
-  padding-block: 1.875rem;
+  padding-block: var(--space);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &__shopping-cart {
+    width: clamp(1.5rem, 5.2vw, 2.25rem);
+
+    @include for-phone-up {
+      width: 1.5rem;
+    }
+  }
+
 }

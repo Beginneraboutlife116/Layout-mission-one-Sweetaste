@@ -1,0 +1,59 @@
+@use '../abstract/mixins' as *;
+
+.nav {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: calc(var(--space) * -1);
+  width: 100vw;
+  background-color: #fff;
+  text-align: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .1s ease;
+  
+  &__item {
+    margin-block-end: 2.5vmin;
+  }
+
+  &__link {
+    opacity: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include for-phone-up {
+    position: relative;
+    visibility: visible;
+    transform: scaleY(1);
+    background-color: transparent;
+    inset: 0;
+    width: min(22.87%, 13.4375rem);
+    margin-inline: auto min(7.7vw, 4.9375rem);
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-block-end: 0;
+    }
+
+    &__link {
+      opacity: 1;
+    }
+  }
+}
+
+#nav-toggle:checked + .nav {
+  visibility: visible;
+  transform: scaleY(1);
+
+  .nav__link {
+    transition: opacity .2s ease;
+    opacity: 1;
+  }
+}

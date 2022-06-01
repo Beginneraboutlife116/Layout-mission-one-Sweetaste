@@ -1,0 +1,30 @@
+@use '../abstract/mixins' as *;
+
+.logos {
+  width: min(36.2%, 13.7181rem);
+
+  @include for-phone-up {
+    & > a {
+      display: flex;
+      gap: 3.8%;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.logo {
+  &_desktop-only {
+    visibility: hidden;
+    width: 0;
+  }
+
+  @include for-phone-up {
+    flex: 1 1;
+
+    &_desktop-only {
+      visibility: visible;
+      flex: 0 0 40px;
+    }
+  }
+}
