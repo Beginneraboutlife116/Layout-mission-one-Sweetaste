@@ -1,0 +1,28 @@
+@use '../abstract/mixins' as *;
+
+.category {
+  line-height: calc(40 / 24);
+  font-size: var(--fz-xl);
+  text-align: center;
+
+  &__title {
+    font-size: inherit;
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    pointer-events: none;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--clr-secondary);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--clr-secondary);
+    }
+  }
+
+  &__title,
+  &__item {
+    padding-block: 1rem;
+  }
+}
