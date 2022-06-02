@@ -8,7 +8,7 @@
 
   
   &__wrapper {
-    @include container(var(--space-2), 48.75rem);
+    @include container(var(--space-3), 48.75rem);
 
     display: flex;
     flex-direction: column;

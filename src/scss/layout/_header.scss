@@ -1,7 +1,7 @@
 @use '../abstract/mixins' as *;
 
 .header {
-  @include container(var(--space-2), 0);
+  @include container(var(--space-3), 0);
 
   padding-block: var(--space-1);
   display: flex;

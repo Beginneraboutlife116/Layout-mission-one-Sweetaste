@@ -1,0 +1,66 @@
+@use '../abstract/mixins' as *;
+
+.footer {
+  background-color: var(--clr-secondary);
+  padding-block: var(--space-1);
+  font-weight: var(--fw-regular);
+
+  &__wrapper {
+    @include container(var(--space-3), 48.75rem);
+  }
+
+  &__logo {
+    width: 10.7rem;
+  }
+
+  &__shop-info {
+    margin-block: 2.25rem;
+    font-family: var(--ff-secondary);
+  }
+
+  &__social-media {
+    display: grid;
+    grid-template-columns: 2rem 2rem;
+    gap: 0.5rem;
+  }
+
+  &__copyright {
+    margin-block-start: 1.5rem;
+    font-family: var(--ff-others);
+  }
+
+  &_none {
+    display: none;
+  }
+
+  @include for-phone-up {
+    min-height: 21.25rem;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_none {
+      display: block;
+    }
+
+    &__slogan {
+      margin-inline-start: auto;
+      width: var(--space-3);
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__shop-info {
+      margin-block-start: auto;
+    }
+
+    &__copyright {
+      margin-block-start: var(--space-2);
+    }
+  }
+}

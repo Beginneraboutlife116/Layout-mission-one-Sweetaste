@@ -18,7 +18,8 @@
   --clr-others: #FFE180;
 
   --space-1: #{$space};
-  --space-2: #{$space * 2};
+  --space-2: #{$space * 1.5};
+  --space-3: #{$space * 2};
 }
 
 body {

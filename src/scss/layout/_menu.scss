@@ -2,7 +2,7 @@
 
 .menu {
   @include for-phone-up {
-    margin-block-start: var(--space-2);
+    margin-block-start: var(--space-3);
     display: grid;
     grid-template-columns: 18.75rem 1fr;
     gap: 1.25rem;
