@@ -1,3 +1,5 @@
+@use '../abstract/variables' as *;
+
 :root {
   --fz-md: 1rem;
   --fz-lg: calc(var(--fz-md) * 1.25);
@@ -15,7 +17,8 @@
   --clr-secondary: #EAF0ED;
   --clr-others: #FFE180;
 
-  --space: 1.875rem;
+  --space-1: #{$space};
+  --space-2: #{$space * 2};
 }
 
 body {
@@ -29,7 +32,7 @@ a {
   display: block;
   text-decoration: none;
   
-  &:where(:active, :visited) {
+  &:where(:active, :visited, :link) {
     color: inherit;
   }
 }
@@ -48,4 +51,5 @@ button {
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+  color: inherit;
 }

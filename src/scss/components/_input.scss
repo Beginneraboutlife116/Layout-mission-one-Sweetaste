@@ -1,0 +1,10 @@
+.input {
+  padding-block: 0.8125rem;
+  border: 1px solid var(--clr-secondary);
+  background-color: var(--clr-secondary);
+
+  &__icon {
+    background-color: var(--clr-secondary);
+    padding: 1rem clamp(1rem, 5.5vw, 1.25rem);
+  }
+}

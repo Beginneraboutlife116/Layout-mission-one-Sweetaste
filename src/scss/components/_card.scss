@@ -5,14 +5,10 @@
 .card {
   width: 19.6875rem;
   margin-inline: auto;
-  margin-block-start: var(--space);
+  margin-block-start: var(--space-1);
 
   &_mobile_none {
     display: none;
-
-    @include for-tablet-up {
-      display: block;
-    }
   }
 
   &__display {
@@ -60,6 +56,10 @@
     font-weight: var(--fw-light);
     border-left: 1px solid var(--clr-secondary);
   }
+
+  &__btn {
+    width: 100%;
+  }
   
   @include for-phone-up {
     width: max(18.75rem, 100% - 5rem);
@@ -68,6 +68,10 @@
 
   @include for-tablet-up {
     width: 100%;
+
+    &_mobile_none {
+      display: block;
+    }
   }
 }
 

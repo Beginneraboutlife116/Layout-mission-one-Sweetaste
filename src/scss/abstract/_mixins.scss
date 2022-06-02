@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 // for media query
 // up to 620px
 @mixin for-phone-up {
@@ -19,7 +21,15 @@
 }
 
 // for container width
-@mixin container {
-  width: min(100% - var(--custom-space, var(--space)) * 2, var(--custom-width, 58.75rem));
+@mixin container($custom-space, $custom-width) {
+  @if $custom-space == 0 and $custom-width == 0 {
+    width: min(100%, 58.75rem);
+  } @else if $custom-space == 0 {
+    width: min(100%, $custom-width);
+  } @else if $custom-width == 0{
+    width: min(100% - $custom-space, 58.75rem);
+  } @else {
+    width: min(100% - $custom-space, $custom-width);
+  }
   margin-inline: auto;
 }

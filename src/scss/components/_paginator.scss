@@ -1,19 +1,10 @@
 @use '../abstract/mixins' as *;
 
 .paginator {
-  @include for-tablet-up {
-    --custom-space: 0rem;
-    @include container;
-  }
-
   &__list {
     width: min(78.93%, 18.5rem);
     margin-inline: auto;
     display: flex;
-
-    @include for-tablet-up {
-      margin-inline-end: 0;
-    }
   }
 
   &__item {
@@ -43,6 +34,14 @@
     @extend .paginator_current-page;
     svg {
       fill: var(--clr-secondary);
+    }
+  }
+
+  @include for-tablet-up {
+    @include container(0, 0);
+
+    &__list {
+      margin-inline-end: 0;
     }
   }
 }

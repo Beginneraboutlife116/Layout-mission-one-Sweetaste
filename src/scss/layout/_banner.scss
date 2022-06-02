@@ -1,12 +1,11 @@
 @use '../abstract/mixins' as *;
 
 .banner {
-  --custom-space: 0rem;
-  @include container;
+  @include container(0, 0);
 
   background-image: url(https://bit.ly/2Qodh3Z);
   background-size: cover;
-  padding: var(--space);
+  padding: var(--space-1);
 
   &__slogan {
     width: 15.85%;

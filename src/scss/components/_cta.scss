@@ -1,0 +1,59 @@
+@use '../abstract/mixins' as *;
+
+.cta {
+  margin-block-start: var(--space-1);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  padding-block: var(--space-1);
+
+  
+  &__wrapper {
+    @include container(var(--space-2), 48.75rem);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+  }
+  
+  &__title {
+    margin-inline: auto;
+    display: flex;
+    gap: 1.25rem;
+    font-size: var(--fz-xl);
+    font-weight: var(--fw-regular);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__logo {
+    width: 2.5rem;
+  }
+  
+  &__form {
+    @include container(0, 23.75rem);
+
+    display: flex;
+    align-items: stretch;
+  }
+  
+  &__input {
+    flex: 1;
+  }
+  
+  &__btn {
+    padding-inline: 1.5rem;
+  }
+
+  @include for-tablet-up {
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__form,
+    &__title {
+      margin-inline: 0;
+    }
+  }
+}
