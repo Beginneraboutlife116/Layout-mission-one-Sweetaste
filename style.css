@@ -482,17 +482,14 @@ button {
 }
 .paginator__item {
   width: 100%;
-  aspect-ratio: 1;
-  border: 1px solid var(--clr-secondary);
-}
-.paginator__item + .paginator__item {
-  border-left: none;
 }
 .paginator__link {
-  text-align: center;
   width: 100%;
-  padding-block: calc((100% - 1.5rem) / 2);
   font-size: var(--fz-lg);
+  border: 1px solid var(--clr-secondary);
+}
+.paginator__link + .paginator__link {
+  border-left: none;
 }
 .paginator__link svg {
   margin-inline: auto;

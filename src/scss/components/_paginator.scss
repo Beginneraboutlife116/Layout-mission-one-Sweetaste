@@ -9,20 +9,16 @@
 
   &__item {
     width: 100%;
-    aspect-ratio: 1;
-    border: 1px solid var(--clr-secondary);
-    
-    & + & {
-      border-left: none;
-    }
-
   }
   
   &__link {
-    text-align: center;
     width: 100%;
-    padding-block: calc((100% - 1.5rem) / 2);
     font-size: var(--fz-lg);
+    border: 1px solid var(--clr-secondary);
+  
+    & + & {
+      border-left: none;
+    }
 
     & svg {
       margin-inline: auto;
