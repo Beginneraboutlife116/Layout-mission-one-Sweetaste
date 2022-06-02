@@ -24,7 +24,7 @@
     }
   }
 
-  @include for-tablet-up {
+  @include for-desktop-up {
     position: relative;
     visibility: visible;
     transform: scaleY(1);

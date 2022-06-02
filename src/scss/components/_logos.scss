@@ -3,7 +3,7 @@
 .logos {
   width: min(36.2%, 13.7181rem);
 
-  @include for-tablet-up {
+  @include for-desktop-up {
     & > a {
       display: flex;
       gap: 3.8%;
@@ -19,7 +19,7 @@
     width: 0;
   }
 
-  @include for-tablet-up {
+  @include for-desktop-up {
     flex: 1 1;
 
     &_desktop-only {

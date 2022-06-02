@@ -9,7 +9,7 @@
     justify-content: center;
   }
 
-  @include for-tablet-up {
+  @include for-desktop-up {
     --custom-space: 0rem;
     @include container;
   }

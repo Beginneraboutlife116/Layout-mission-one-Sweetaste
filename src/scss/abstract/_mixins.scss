@@ -5,14 +5,14 @@
     @content;
   }
 }
-// for cards layout
-@mixin for-cards-layout {
+// up to 780px
+@mixin for-tablet-up {
   @media (min-width: 48.75rem) {
     @content;
   }
 }
 // up to 900px
-@mixin for-tablet-up {
+@mixin for-desktop-up {
   @media (min-width: 56.25rem) {
     @content;
   }

@@ -6,7 +6,7 @@
   gap: 1.25rem;
   margin-block-end: var(--space);
 
-  @include for-cards-layout {
+  @include for-tablet-up {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

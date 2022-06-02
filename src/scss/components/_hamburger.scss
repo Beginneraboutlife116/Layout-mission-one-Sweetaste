@@ -33,7 +33,7 @@
     }
   }
   
-  @include for-tablet-up {
+  @include for-desktop-up {
     display: none;
   }
 }
