@@ -318,7 +318,7 @@ button {
   margin-inline: auto;
   margin-block-start: var(--space-1);
 }
-.card_mobile_none {
+.card_none {
   display: none;
 }
 .card__display {
@@ -395,7 +395,7 @@ button {
   .card {
     width: 100%;
   }
-  .card_mobile_none {
+  .card_none {
     display: block;
   }
 }
