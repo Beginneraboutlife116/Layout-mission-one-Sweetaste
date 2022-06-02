@@ -28,7 +28,6 @@
 
 - [Github repo](https://github.com/Beginneraboutlife116/Layout-mission-one-Sweetaste)
 - [Live Site URL](https://beginneraboutlife116.github.io/Layout-mission-one-Sweetaste/)
-- [錄影](https://www.youtube.com/watch?v=pLGCN_iH6e0)
 
 ## 過程
 
