@@ -1,6 +1,4 @@
-@use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
-@use 'sass:string';
 
 .card {
   @include container(var(--space-1), 23.75rem);
