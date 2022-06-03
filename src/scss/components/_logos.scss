@@ -20,7 +20,7 @@
   }
 
   @include for-desktop-up {
-    flex: 1 1;
+    width: 78%;
 
     &_desktop-only {
       visibility: visible;

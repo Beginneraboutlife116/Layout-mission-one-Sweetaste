@@ -249,7 +249,7 @@ button {
 }
 @media (min-width: 56.25rem) {
   .logo {
-    flex: 1 1;
+    width: 78%;
   }
   .logo_desktop-only {
     visibility: visible;
