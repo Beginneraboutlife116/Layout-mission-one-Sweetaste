@@ -370,7 +370,7 @@ button {
 }
 
 .card {
-  width: 19.6875rem;
+  width: min(100% - var(--space-1), 23.75rem);
   margin-inline: auto;
   margin-block-start: var(--space-1);
 }
@@ -379,8 +379,11 @@ button {
 }
 .card__display {
   width: 100%;
-  height: 19.6875rem;
   position: relative;
+}
+.card__pic {
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 .card__category {
   width: min-content;
@@ -390,36 +393,7 @@ button {
   padding: 3.33%;
   position: absolute;
   left: 6.67%;
-}
-.card_pic_1 {
-  background-image: url("https://bit.ly/2QiWeQW");
-  background-size: cover;
-  background-position: center;
-}
-.card_pic_2 {
-  background-image: url("https://bit.ly/2zBjQuq");
-  background-size: cover;
-  background-position: center;
-}
-.card_pic_3 {
-  background-image: url("https://bit.ly/2zKOP7w");
-  background-size: cover;
-  background-position: center;
-}
-.card_pic_4 {
-  background-image: url("https://bit.ly/2NcDVuB");
-  background-size: cover;
-  background-position: center;
-}
-.card_pic_5 {
-  background-image: url("https://bit.ly/2zBDAxX");
-  background-size: cover;
-  background-position: center;
-}
-.card_pic_6 {
-  background-image: url("https://bit.ly/2zL5jN7");
-  background-size: cover;
-  background-position: center;
+  top: 0;
 }
 .card__info {
   display: flex;
@@ -443,7 +417,6 @@ button {
 }
 @media (min-width: 38.75rem) {
   .card {
-    width: max(18.75rem, 100% - 5rem);
     margin-block-start: 0;
   }
 }
