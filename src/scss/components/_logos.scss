@@ -4,12 +4,10 @@
   width: min(36.2%, 13.7181rem);
 
   @include for-desktop-up {
-    & > a {
-      display: flex;
-      gap: 3.8%;
-      align-items: center;
-      justify-content: space-between;
-    }
+    display: flex;
+    gap: 3.8%;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 

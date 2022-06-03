@@ -235,7 +235,7 @@ button {
   width: min(36.2%, 13.7181rem);
 }
 @media (min-width: 56.25rem) {
-  .logos > a {
+  .logos {
     display: flex;
     gap: 3.8%;
     align-items: center;
