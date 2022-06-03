@@ -12,9 +12,9 @@
     pointer-events: none;
   }
 
-  &__item {
+  &__link {
+    width: 100%;
     border-bottom: 1px solid var(--clr-secondary);
-    cursor: pointer;
 
     &:hover {
       background-color: var(--clr-secondary);
@@ -22,7 +22,7 @@
   }
 
   &__title,
-  &__item {
+  &__link {
     padding-block: 1rem;
   }
 }

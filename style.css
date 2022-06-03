@@ -358,14 +358,14 @@ button {
   background-color: var(--clr-primary);
   pointer-events: none;
 }
-.category__item {
+.category__link {
+  width: 100%;
   border-bottom: 1px solid var(--clr-secondary);
-  cursor: pointer;
 }
-.category__item:hover {
+.category__link:hover {
   background-color: var(--clr-secondary);
 }
-.category__title, .category__item {
+.category__title, .category__link {
   padding-block: 1rem;
 }
 
