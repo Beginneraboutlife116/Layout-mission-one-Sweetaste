@@ -19,14 +19,16 @@
   }
 
   &__category {
-    width: min-content;
+    padding-inline: 3.33%;
     background-color: var(--clr-primary);
     color: var(--clr-secondary);
-    line-height: 1.25;
-    padding: 3.33%;
     position: absolute;
     left: 6.67%;
     top: 0;
+
+    writing-mode: vertical-lr;
+    line-height: 2.375;
+    letter-spacing: 5px;
   }
 
   &__info {
