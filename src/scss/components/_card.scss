@@ -55,6 +55,11 @@
 
   &__btn {
     width: 100%;
+
+    &:hover {
+      background-color: var(--clr-primary-hover);
+      color: white;
+    }
   }
   
   @include for-phone-up {

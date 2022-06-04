@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 :root {
   --fz-md: 1rem;
   --fz-lg: calc(var(--fz-md) * 1.25);
@@ -12,8 +14,11 @@
   --fw-light: 300;
 
   --clr-primary: #3F5D45;
+  --clr-primary-hover: #{color.scale(#3F5D45, $lightness: -20%)};
   --clr-secondary: #EAF0ED;
+  --clr-secondary-hover: #{color.scale(#EAF0ED, $lightness: 10%)};
   --clr-others: #FFE180;
+  --clr-others-hover: #{color.scale(#FFE180, $lightness: -20%)};
 
   --space: 1.875rem;
   --space-1: calc(var(--space) * 1);

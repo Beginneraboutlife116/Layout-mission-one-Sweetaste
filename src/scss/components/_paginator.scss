@@ -23,6 +23,10 @@
     & svg {
       margin-inline: auto;
     }
+
+    &:hover {
+      background-color: var(--clr-secondary-hover);
+    }
   }
 
   &__prev:active,
@@ -45,4 +49,8 @@
 .paginator_current-page {
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
+
+  &:hover {
+    @extend .paginator_current-page;
+  }
 }

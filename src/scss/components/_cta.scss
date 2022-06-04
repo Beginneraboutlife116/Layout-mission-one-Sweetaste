@@ -42,6 +42,10 @@
   
   &__btn {
     padding-inline: 1.5rem;
+
+    &:hover {
+      background-color: var(--clr-others-hover);
+    }
   }
 
   @include for-tablet-up {

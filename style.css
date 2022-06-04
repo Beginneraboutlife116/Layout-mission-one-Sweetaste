@@ -78,8 +78,11 @@ p, h1, h2, h3, h4, h5, h6 {
   --fw-regular: 400;
   --fw-light: 300;
   --clr-primary: #3F5D45;
+  --clr-primary-hover: #324a37;
   --clr-secondary: #EAF0ED;
+  --clr-secondary-hover: #ecf2ef;
   --clr-others: #FFE180;
+  --clr-others-hover: #ffcf33;
   --space: 1.875rem;
   --space-1: calc(var(--space) * 1);
   --space-2: calc(var(--space) * 1.5);
@@ -417,6 +420,10 @@ button {
 .card__btn {
   width: 100%;
 }
+.card__btn:hover {
+  background-color: var(--clr-primary-hover);
+  color: white;
+}
 @media (min-width: 38.75rem) {
   .card {
     margin-block-start: 0;
@@ -469,6 +476,9 @@ button {
 .paginator__link svg {
   margin-inline: auto;
 }
+.paginator__link:hover {
+  background-color: var(--clr-secondary-hover);
+}
 .paginator__prev:active svg, .paginator__next:active svg {
   fill: var(--clr-secondary);
 }
@@ -482,11 +492,10 @@ button {
   }
 }
 
-.paginator_current-page, .paginator__prev:active, .paginator__next:active {
+.paginator_current-page, .paginator_current-page:hover, .paginator__prev:active, .paginator__next:active {
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
 }
-
 .cta {
   margin-block-start: var(--space-1);
   background-color: var(--clr-primary);
@@ -522,6 +531,9 @@ button {
 }
 .cta__btn {
   padding-inline: 1.5rem;
+}
+.cta__btn:hover {
+  background-color: var(--clr-others-hover);
 }
 @media (min-width: 48.75rem) {
   .cta__wrapper {
