@@ -128,7 +128,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 .header__shopping-cart {
   width: clamp(1.5rem, 5.2vw, 2.25rem);
@@ -299,9 +298,9 @@ button {
 .nav {
   visibility: hidden;
   position: absolute;
-  top: 100%;
-  left: calc(var(--space-1) * -1);
-  width: 100vw;
+  top: clamp(4rem, 15vw, 6rem);
+  left: 0;
+  width: 100%;
   background-color: #fff;
   text-align: center;
   transform: scaleY(0);
